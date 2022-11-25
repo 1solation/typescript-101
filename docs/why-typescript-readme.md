@@ -2,6 +2,10 @@
 
 ![why though](https://i.kym-cdn.com/entries/icons/original/000/022/978/y_tho_meme.jpg)
 
+Here's my attempt to explain briefly, through a medium of text and spicy memes, what typescipt is & why you should use it.
+
+## What is TypeScript?
+
 TypeScript is a superset of JavaScript that has optional typing and compiles down to plain JavaScript. TypeScript is technically JavaScript with [static typing](https://developer.mozilla.org/en-US/docs/Glossary/Static_typing).
 
 To make sure there aren't any bugs in your code, you'd usually write some tests - following test-driven development (TDD). You would also manually verify the code works, by running it, and also have a peer review (pull requests on GitHub or have someone just sit next to you and look at your code).
