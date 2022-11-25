@@ -1,5 +1,7 @@
 # TypeScript 101
 
+![TypeScript Logo](https://miro.medium.com/max/1000/1*2f1lCdtqoP_BnPeZby3QRg.png)
+
 The aim of this repository is to give you the foundations to be able to go and explore more in depth TypeScript yourself.
 
 This repository also assumes you have basic programming knowledge & a little experience/knowledge of JavaScript.
