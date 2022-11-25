@@ -1,6 +1,6 @@
 # Why TypeScript?
 
-![why though](https://i.kym-cdn.com/entries/icons/original/000/022/978/y_tho_meme.jpg)
+![why though](./img/y_tho_meme_js_ts.jpg)
 
 Here's my attempt to explain briefly, through a medium of text and spicy memes, what typescipt is & why you should use it.
 
