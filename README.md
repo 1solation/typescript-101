@@ -17,6 +17,6 @@ You can [download TypeScript via npm or with Visual Studio](https://www.typescri
 
 ## Useful resources
 
-* [TypeScript language docs](https://www.typescriptlang.org/),
+* [TypeScript language documentation](https://www.typescriptlang.org/)
 
 * This includes the [Playground](https://www.typescriptlang.org/play), an in-browser environment you can use to try the language without setting up your local dev environment.
