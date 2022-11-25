@@ -4,6 +4,8 @@ The aim of this repository is to give you the foundations to be able to go and e
 
 This repository also assumes you have basic programming knowledge & a little experience/knowledge of JavaScript.
 
+You can [download TypeScript via npm or with Visual Studio](https://www.typescriptlang.org/download), or take a look at the official [TypeScript language website](https://www.typescriptlang.org/).
+
 ### Contents
 * Why TypeScript?
     * [Why TypeScript README](docs/why-typescript-readme.md)
