@@ -2,13 +2,15 @@
 
 ## Primitives
 
-Along with this file, there are code examples of each type in [common-types-examples.ts](../src/common-types-examples.ts).
+Along with this file, there are code examples in [common-types-examples.ts](../src/common-types-examples.ts) and [common-types-examples-part-2.ts](../src/common-types-examples-part-2.ts).
 
 There is a [TypeScript playground](https://www.typescriptlang.org/play) where you can write, learn and share TypeScript. This is a sandbox environment in which you can experiment with TypeScript syntax in a safe area.
 
 The [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) includes really good introductory documentation to the "everyday types" that you will encounter on your TS journey! To add to this, there is the [utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html) which make common type transformations easier.
 
 Please note the primitive types below are in lowercase. The following types: `Boolean`, `Number`, `String`, `Symbol` and `Object` refer to non-primitive boxed objects that are almost never used appropriately in JavaScript code. See TypeScripts [do's and don'ts on general types](https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html#number-string-boolean-symbol-and-object) for more information.
+
+The following have code examples in [common-types-examples.ts](../src/common-types-examples.ts).
 
 Similar to JavaScript, there are 3 commonly used primitives:
 - `boolean`
@@ -62,6 +64,9 @@ Note: `null` and `undefined` will not be factored into any type checks unless yo
 	- Unlike most TypeScript features, this is not a type-level addition to JavaScript but something added to the language and runtime.
 	- As in languages like C#, an enum is a way of giving more friendly names to sets of numeric values.
 	- Read more about enums here [https://www.typescriptlang.org/docs/handbook/enums.html](https://www.typescriptlang.org/docs/handbook/enums.html)
+
+The following have code examples in [common-types-examples-part-2.ts](../src/common-types-examples-part-2.ts).
+
 - `union type`
 	- A simple way to combine types is called a union type
 	- This is created from 2 or more types
