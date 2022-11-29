@@ -19,7 +19,7 @@ const firstName = Symbol("name");
 const secondName = Symbol("name");
 // if we check their equality, it will always return false & TS will give us an error
 if (firstName === secondName) {
-  // cannot ever happen as each Symbol is a globally unique reference
+  // can not happen as each Symbol is a globally unique reference
 }
 
 // bigint
@@ -65,6 +65,9 @@ if (typeof userInput === "boolean") {
   // the following will show a type error
   const userInputNumber: number = userInput;
 }
+
+// defining an object explicitly
+const myObject: object = {};
 
 // defining arrays
 // method 1
