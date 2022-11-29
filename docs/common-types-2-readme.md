@@ -8,6 +8,14 @@ This is part 2 and a continuation from [Common Types in TypeScript part 1](). Th
     - e.g. variableName: type1 | type2;
 - More reading on [union types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
 ```typescript
+// union types
+let age: string | number;
+// set to a string
+age = "twenty five";
+// set to a number
+age = 25;
+// attempt to set age to boolean, gives us a type error
+age = false;
 ```
 
 `discriminated unions`

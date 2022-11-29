@@ -196,10 +196,11 @@ person[3]; // ERROR: Tuple type '[string, number]' of length 2 has no element at
 // enums
 // enums begin numbering their members starting at 0
 enum Colour {
-  Green, // 0
-  Amber, // 1
-  Red, // 2
+  Green, // index 0
+  Amber, // index 1
+  Red, // index 2
 }
+
 // call element by index
 console.log(Colour[0]); // Green
 
@@ -209,6 +210,7 @@ enum roomInMetres {
   Floor2 = 321,
   Floor3 = 5,
 }
+
 // call element by it's name
 console.log(roomInMetres.Floor2); // 321
 ```
