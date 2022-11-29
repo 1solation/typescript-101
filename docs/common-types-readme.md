@@ -114,10 +114,10 @@ new value();
 // unknown type with above code in same file
 let value1: unknown;
 // the following operations are no longer considered type-correct (value1[0] would not be type-correct with the strictNullChecks option on)
-value1.trim(); // ERROR: Object is of type 'unkown'
-value1[0]; // ERROR: Object is of type 'unkown'
-value1.property.does.not.exist; // ERROR: Object is of type 'unkown'
-new value1(); // ERROR: Object is of type 'unkown'
+value1.trim(); // ERROR: Object is of type 'unknown'
+value1[0]; // ERROR: Object is of type 'unknown'
+value1.property.does.not.exist; // ERROR: Object is of type 'unknown'
+new value1(); // ERROR: Object is of type 'unknown'
 
 // unknown type pt2
 // set unknown type to default of null for this example
@@ -172,19 +172,19 @@ let person: [string, number];
 person = ["Bob", 18];
 
 // attempt to initialise in the incorrect order, gives us type errors
-person = [18, "Bob"];
+person = [18, "Bob"]; // ERROR 1: Type of 'number' is not assignable to type 'string'. ERROR 2: Type of 'string' is not assignable to type 'number'.
 
 // attempt to initialise it as empty, gives us type errors
-person = [];
+person = []; // ERROR: Type '[]' is not assignable to type '[string, number]'
 
 // access correct element at index, correct type is retrieved and we can do an operation on the string
 person[0].substring(1);
 
 // attempt to access the same substring element at the incorrect index, and we get a type error
-person[1].substring(1);
+person[1].substring(1); // ERROR: Property 'substring' does not exist on type 'number'.
 
 // attempt to access element outside the set of known indicies will error
-person[3];
+person[3]; // ERROR: Tuple type '[string, number]' of length 2 has no element at index '3'.
 
 ```
 
