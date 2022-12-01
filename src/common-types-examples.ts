@@ -27,6 +27,7 @@ if (firstName === secondName) {
 const big1: bigint = BigInt(200);
 // creation via the literal syntax
 let big2: bigint = 200n;
+let big3 = 100.20n; // error as this value is a decimal
 
 const uninitialisedValue: undefined = undefined;
 

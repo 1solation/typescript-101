@@ -1,8 +1,12 @@
 # Common Types in TypeScript
 
+In this installment of the "Why TypeScript" series, we'll dive into some common types you see within TypeScript, with some code examples along the way. 
+
 This is part 1 of the common types in TypeScript, there will be a part 2 to follow which explain a few more in depth types within TypeScript.
 
 ## Primitives
+
+![Primitive](https://media0.giphy.com/media/VEVfqy0Vu4c7xziUUN/giphy.gif?cid=ecf05e47tp6u7v4nxkp2gltwpu2l3y4qokaqk79e4nptmmyo&rid=giphy.gif&ct=g)
 
 Along with this file, there are code examples in [common-types-examples.ts](../src/common-types-examples.ts).
 
@@ -12,23 +16,31 @@ The [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/2/everyda
 
 Please note the primitive types below are in lowercase. The following types: `Boolean`, `Number`, `String`, `Symbol` and `Object` refer to non-primitive boxed objects that are almost never used appropriately in JavaScript code. See TypeScripts [do's and don'ts on general types](https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html#number-string-boolean-symbol-and-object) for more information.
 
+![strings-numbers-booleans](https://media4.giphy.com/media/WemtkIRyd2JMciY3Zh/giphy.gif?cid=ecf05e473qwzpzqxfu06tnn4gqvzcw4wph5vzitsvtlq26n4&rid=giphy.gif&ct=g)
+
 The following have code examples in [common-types-examples.ts](../src/common-types-examples.ts).
 
 Similar to JavaScript, there are 3 commonly used primitives:
 
 `boolean`
+
+![true-or-false](https://media3.giphy.com/media/26tk0OUyKYpGd6zbG/giphy.gif?cid=ecf05e47znlezl8mrjmcg7cqjqmq9rnxaojlaqtb8ae9m6wy&rid=giphy.gif&ct=g)
 - This is the same as in JavaScript, simple true/false value
 ```typescript
 const isFun: boolean = false;
 ```
 
 `number`
+
+![calculating](https://media0.giphy.com/media/3owzW5c1tPq63MPmWk/giphy.gif?cid=ecf05e47wpat0zpbqoroh2xnhsiy9xvj44d0tluis722605y&rid=giphy.gif&ct=g)
 - There is no int or float, everything is number to JavaScript/TS
 ```typescript
 const pie: number = 3.14;
 ```
 
 `string`
+
+![string](https://media0.giphy.com/media/3o6nUNCph1w9w09hAc/giphy.gif?cid=ecf05e47eoegwpnzayqvntp40h2h5trdxinekpz45co27b4n&rid=giphy.gif&ct=g)
 - Like JavaScript, strings can use single quotes or double quotes
 - Template string using backticks and the `${}` syntax
 ```typescript
@@ -42,7 +54,7 @@ const fullName: string = "Hasib Ahmed";
 const greet: string = `Salutations ${fullName}!`;
 ```
 
-There are other basic types in TypeScript which you should be aware of:
+As well as these primitives, there are other basic types in TypeScript which you should be aware of:
 
 `symbol`
 - There is a primitive in JavaScript used to create a globally unique reference via the function `Symbol()`
@@ -59,8 +71,10 @@ if (firstName === secondName) {
 }
 ```
 
-`bigint` 
-- Introduced in TypeScript 3.2, it provides a way to represent whole numbers larger than 253
+`bigint`
+
+![big-number](https://media4.giphy.com/media/3o6Zt6fzS6qEbLhKWQ/giphy.gif?cid=ecf05e472n8qhepekugnp9gr0ohthk8pejhcmlrtfwjy0sc8&rid=giphy.gif&ct=g)
+- Introduced in TypeScript 3.2, it provides a way to represent whole numbers that are very large integers. If you're interested, it's numbers larger than `9007199254740991`
 - You can get a bigint in 2 ways:
 	- Calling the `BigInt()` function
 	- Writing a BigInt literal by adding `n` to the end of any numeric integer
@@ -71,6 +85,7 @@ const big1: bigint = BigInt(200);
 
 // creation via the literal syntax
 let big2: bigint = 200n;
+let big3 = 100.20n; // error as this value is a decimal
 ```
 
 `null`
@@ -85,7 +100,9 @@ const absentValue: null = null;
 const uninitialisedValue: undefined = undefined;
 ```
 
-Note: `null` and `undefined` will not be factored into any type checks unless you have the [strictNullChecks](https://www.typescriptlang.org/tsconfig#strictNullChecks) option enabled (this will be covered in a later posts/updates)
+Note: `null` and `undefined` will not be factored into any type checks unless you have the [strictNullChecks](https://www.typescriptlang.org/tsconfig#strictNullChecks) option enabled (this will be covered in a later posts).
+
+![null-vs-undefined](https://pbs.twimg.com/media/DusCOfyXcAA9_F7?format=jpg)
 
 `any`
 - A top type of TypeScript's type system (aka universal supertype)
@@ -105,6 +122,8 @@ new value();
 ```
 
 `unknown`
+
+![unknown](https://media4.giphy.com/media/cQPQy29ONzKs7E8nWp/giphy.gif?cid=ecf05e476n4ppya20yusdbg8dczl7dwliker99udhh8ecnp8&rid=giphy.gif&ct=g)
 - Another top type of TypeScript's type system
 - If a variable is not known at the time of writing (e.g. accepting all values from user input) we can use the `unknown` type here
 - You can narrow your `unknown` type variable to something more specific by doing typeof checks, comparison checks, or more advanced type guards
@@ -113,6 +132,7 @@ new value();
 ```typescript
 // unknown type with above code in same file
 let value1: unknown;
+
 // the following operations are no longer considered type-correct (value1[0] would not be type-correct with the strictNullChecks option on)
 value1.trim(); // ERROR: Object is of type 'unknown'
 value1[0]; // ERROR: Object is of type 'unknown'
@@ -215,4 +235,4 @@ enum roomInMetres {
 console.log(roomInMetres.Floor2); // 321
 ```
 
-In the next post we will be going over union types, discriminated unions, casting to a different types and casting!
+In the next post in this series we will be going over union types, discriminated unions, casting to a different types and classes!
