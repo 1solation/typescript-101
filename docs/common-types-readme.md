@@ -1,6 +1,6 @@
 # Common Types in TypeScript
 
-In this installment of the "Why TypeScript" series, we'll dive into some common types you see within TypeScript, with some code examples along the way. 
+In this installment of the "Why TypeScript" series, we'll dive into some common types you see within TypeScript, with some code examples along the way.
 
 This is part 1 of the common types in TypeScript, there will be a part 2 to follow which explain a few more in depth types within TypeScript.
 
